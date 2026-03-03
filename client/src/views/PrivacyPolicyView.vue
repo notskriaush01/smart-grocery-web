@@ -191,12 +191,17 @@ import AppFooter from '@/components/AppFooter.vue'
   padding-bottom: var(--space-12);
 }
 
+/* ── Page title: centred, biggest, moderate letter-spacing, normal casing ── */
 .policy-header {
+  text-align: center;
   margin-bottom: var(--space-8);
 }
 
 .policy-title {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
   color: var(--color-dark);
   margin-bottom: var(--space-2);
 }
@@ -208,7 +213,11 @@ import AppFooter from '@/components/AppFooter.vue'
 }
 
 .policy-intro {
-  max-width: 760px;
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-grey-700);
 }
 
 .policy-section {
@@ -217,20 +226,28 @@ import AppFooter from '@/components/AppFooter.vue'
   border-radius: var(--radius-lg);
 }
 
+/* Section heading — clearly below page title */
 .policy-section h2 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-3);
   color: var(--color-dark);
 }
 
+/* Sub-heading within a section */
 .policy-section h3 {
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
   color: var(--color-grey-900);
 }
 
+/* Body text — readable */
 .policy-section p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   margin-bottom: var(--space-3);
   color: var(--color-grey-700);
 }
@@ -244,7 +261,7 @@ import AppFooter from '@/components/AppFooter.vue'
 .policy-section li {
   color: var(--color-grey-700);
   margin-bottom: var(--space-2);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
 
@@ -258,6 +275,10 @@ import AppFooter from '@/components/AppFooter.vue'
 @media (max-width: 768px) {
   .policy-page {
     padding-top: var(--space-8);
+  }
+
+  .policy-title {
+    font-size: var(--font-size-3xl);
   }
 
   .policy-section {

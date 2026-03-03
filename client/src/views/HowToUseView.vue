@@ -2,7 +2,7 @@
   <div class="page-content">
     <main class="container how-to-page">
       <section class="intro-section">
-        <h1 class="intro-title">How smartbasket work</h1>
+        <h1 class="intro-title">How Smart Basket Works</h1>
 
         <div class="intro-grid">
           <div class="intro-image-wrap">
@@ -99,7 +99,7 @@ const tabs = [
       'Once your basket is ready, Smartbasket automatically shows you where your basket costs less.',
     points: [
       'Real price comparison',
-      'Clear “from lowest price” indication',
+      'Clear "from lowest price" indication',
       'Transparent store breakdown'
     ]
   },
@@ -141,12 +141,18 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
   margin: 0 auto var(--space-10);
 }
 
+/* ── Page title: centred, biggest, moderate letter-spacing ── */
 .intro-title {
   text-align: center;
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--space-6);
+  font-size: var(--font-size-4xl);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  margin-bottom: var(--space-8);
 }
 
+/* ── Intro grid: image and steps columns same height ── */
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 1fr);
@@ -154,20 +160,25 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
   align-items: stretch;
 }
 
+/* Image fills the full column height so its bottom matches the last step card */
 .intro-image-wrap {
   overflow: hidden;
   border-radius: var(--radius-md);
+  display: flex;
 }
 
 .intro-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+/* Steps column: distribute three cards evenly across the same height as the image */
 .steps-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  justify-content: space-between;
 }
 
 .step-card {
@@ -177,23 +188,29 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
 
 .step-number {
   font-family: var(--font-heading);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--color-dark-soft);
   line-height: var(--line-height-tight);
-  margin-right: var(--space-2);
+  margin-right: var(--space-1);
 }
 
+/* Step heading — subordinate to page title */
 .step-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
   margin-bottom: var(--space-2);
   display: flex;
   align-items: baseline;
   gap: var(--space-1);
 }
 
+/* Body text — readable */
 .step-text {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-grey-700);
 }
 
 .tabs-section {
@@ -217,26 +234,34 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   padding: var(--space-2) 0;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .tab-btn--active {
-  color: var(--color-dark-soft);
-  border-bottom-color: var(--color-dark-soft);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 .tab-content {
   padding: var(--space-6);
 }
 
+/* Tab heading — subordinate to page title */
 .tab-title {
   font-size: var(--font-size-xl);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
   margin-bottom: var(--space-3);
 }
 
 .tab-description {
   margin-bottom: var(--space-4);
   max-width: 900px;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-grey-700);
 }
 
 .tab-list {
@@ -245,7 +270,8 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
 }
 
 .tab-list li {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   color: var(--color-grey-700);
   margin-bottom: var(--space-2);
 }
@@ -253,6 +279,11 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
 @media (max-width: 1024px) {
   .intro-grid {
     grid-template-columns: 1fr;
+  }
+
+  .steps-list {
+    justify-content: flex-start;
+    gap: var(--space-3);
   }
 }
 
@@ -262,7 +293,7 @@ const activeTab = computed(() => tabs.find((tab) => tab.id === activeTabId.value
   }
 
   .intro-title {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-3xl);
   }
 
   .tab-content {
