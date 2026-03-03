@@ -70,7 +70,8 @@ async function fetchResults(q) {
   if (!q) return
   loading.value = true
   try {
-    products.value = await productService.search(q)
+    const res = await productService.search(q)
+    products.value = res.content || []
   } catch {
     products.value = []
   } finally {
@@ -78,8 +79,11 @@ async function fetchResults(q) {
   }
 }
 
+import { useBasket } from '@/composables/useBasket.js'
+const { addItem } = useBasket()
+
 function addToBasket(product) {
-  console.log('Add to basket:', product)
+  addItem(product)
 }
 
 // Re-fetch when query param changes

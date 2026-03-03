@@ -1,11 +1,6 @@
 /**
  * api.js — Central API service
- *
- * How to connect to your Spring Boot backend:
- *   1. Set VITE_API_BASE_URL in your .env file:
- *        VITE_API_BASE_URL=http://localhost:8080/api
- *   2. All requests below go through this base URL.
- *   3. If you add auth (JWT), set the token in the Authorization header here.
+ * Backend: Spring Boot @ http://localhost:8080/api
  */
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api'
@@ -14,8 +9,7 @@ async function request(path, options = {}) {
   const url = `${BASE_URL}${path}`
   const headers = {
     'Content-Type': 'application/json',
-    // Uncomment when JWT is implemented:
-    // 'Authorization': `Bearer ${localStorage.getItem('token')}`
+    // 'Authorization': `Bearer ${localStorage.getItem('token')}`,
     ...options.headers
   }
 
@@ -31,24 +25,33 @@ async function request(path, options = {}) {
 
 // --- Product endpoints ---
 export const productService = {
-  /** GET /products/top-deals */
-  getTopDeals() {
-    return request('/products/top-deals')
+
+  /** GET /products/top-deals?limit=8 */
+  getTopDeals(limit = 8) {
+    return request(`/products/top-deals?limit=${limit}`)
   },
 
-  /** GET /products/:id */
+  /** GET /products/:id — returns full ProductDTO with storeListings */
   getById(id) {
     return request(`/products/${id}`)
   },
 
   /**
-   * GET /products?category=&page=&size=&sort=&search=
-   * Returns Spring Page object: { content: [], totalPages, totalElements }
+   * GET /products?category=fresh-food&page=0&size=12&sort=price_asc&search=
+   *
+   * Returns Spring Page: { content: [], totalPages, totalElements, number }
+   *
+   * @param {string} categorySlug  - URL slug e.g. "fresh-food", "dairy-eggs"
+   * @param {object} options
+   * @param {number} options.page  - 1-indexed (we convert to 0-indexed for Spring)
+   * @param {number} options.size
+   * @param {string} options.sort  - "price_asc" | "price_desc" | "name_asc"
+   * @param {string} options.search
    */
   getByCategory(categorySlug, { page = 1, size = 12, sort = 'price_asc', search = '' } = {}) {
     const params = new URLSearchParams({
-      category: categorySlug,
-      page: page - 1,   // Spring uses 0-indexed pages
+      category: categorySlug || '',
+      page: page - 1,         // Spring is 0-indexed
       size,
       sort,
       search
@@ -56,33 +59,34 @@ export const productService = {
     return request(`/products?${params}`)
   },
 
-  /** GET /products/search?q= */
-  search(query) {
-    return request(`/products/search?q=${encodeURIComponent(query)}`)
+  /** GET /products/search?q=chicken&page=0&size=12 */
+  search(query, { page = 1, size = 12 } = {}) {
+    const params = new URLSearchParams({
+      q: query,
+      page: page - 1,
+      size
+    })
+    return request(`/products/search?${params}`)
+  },
+
+  /** GET /products/menu — { "Fresh Food": ["Fruits", ...], ... } */
+  getMenu() {
+    return request('/products/menu')
   }
 }
 
-// --- Basket endpoints (optional backend persistence) ---
+// --- Basket endpoints ---
 export const basketService = {
-  /** GET /basket */
-  getBasket() {
-    return request('/basket')
-  },
-
-  /** POST /basket/items  body: { productId, quantity } */
+  getBasket() { return request('/basket') },
   addItem(productId, quantity = 1) {
     return request('/basket/items', {
       method: 'POST',
       body: JSON.stringify({ productId, quantity })
     })
   },
-
-  /** DELETE /basket/items/:productId */
   removeItem(productId) {
     return request(`/basket/items/${productId}`, { method: 'DELETE' })
   },
-
-  /** PATCH /basket/items/:productId  body: { quantity } */
   updateQuantity(productId, quantity) {
     return request(`/basket/items/${productId}`, {
       method: 'PATCH',
@@ -93,15 +97,12 @@ export const basketService = {
 
 // --- Auth endpoints ---
 export const authService = {
-  /** POST /auth/register */
   register({ username, email, password }) {
     return request('/auth/register', {
       method: 'POST',
       body: JSON.stringify({ username, email, password })
     })
   },
-
-  /** POST /auth/login */
   login({ usernameOrEmail, password }) {
     return request('/auth/login', {
       method: 'POST',

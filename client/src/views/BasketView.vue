@@ -6,10 +6,19 @@
         <p class="basket-subtitle">Add items to your basket for comparing prices. Find the best supermarket for your shop.</p>
       </div>
 
+      <div v-if="basketItems.length && user" class="save-basket-bar">
+        <button class="btn btn-primary" @click="saveBasket">💾 Save as Shopping List</button>
+      </div>
+
       <!-- Empty state -->
       <div v-if="!basketItems.length" class="empty-state">
         <p>Your basket is empty.</p>
         <RouterLink to="/" class="btn btn-primary" style="margin-top:var(--space-4)">Browse Products</RouterLink>
+      </div>
+
+      <!-- Loading state -->
+      <div v-if="loading" style="padding: var(--space-8); text-align:center; color: var(--color-grey-500)">
+        Comparing prices...
       </div>
 
       <!-- Table -->
@@ -92,18 +101,76 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { useBasket } from '@/composables/useBasket.js'
 
 const { items: basketItems, increaseQty, decreaseQty, removeItem } = useBasket()
 
-const stores = ref([
-  { id: 'lidl', name: 'LIDL' },
-  { id: 'aldi', name: 'ALDI' },
-  { id: 'tesco', name: 'TESCO' },
-  { id: 'asda', name: 'ASDA' },
-])
+const stores = ref([])
+const compareData = ref(null)
+const loading = ref(false)
+
+async function fetchCompare() {
+  if (!basketItems.value.length) { compareData.value = null; return }
+  loading.value = true
+  try {
+    const body = {
+      items: basketItems.value.map(i => ({ productId: i.id, quantity: i.quantity }))
+    }
+    const res = await fetch('http://localhost:8080/api/basket/compare', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    })
+    compareData.value = await res.json()
+
+    // Build stores list from response
+    if (compareData.value?.storeBreakdowns?.length) {
+      stores.value = compareData.value.storeBreakdowns.map(s => ({
+        id: s.storeId,
+        name: s.storeName
+      }))
+    }
+  } catch (e) {
+    console.error('Basket compare failed', e)
+  } finally {
+    loading.value = false
+  }
+}
+
+import { useAuth } from '@/composables/useAuth.js'
+const { user } = useAuth()
+
+async function saveBasket() {
+  if (!user.value) return
+  const name = prompt('Name this shopping list:')
+  if (!name?.trim()) return
+  
+  // Fetch existing lists
+  const res = await fetch(`http://localhost:8080/api/users/${user.value.userId}/shopping-lists`)
+  const lists = await res.json()
+  
+  // Append new list
+  const newList = {
+    id: Date.now(),
+    name: name.trim(),
+    savedAt: new Date().toISOString(),
+    items: basketItems.value
+  }
+  lists.push(newList)
+  
+  await fetch(`http://localhost:8080/api/users/${user.value.userId}/shopping-lists`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ lists })
+  })
+  alert(`"${name}" saved!`)
+}
+
+// Refetch whenever basket changes
+watch(basketItems, fetchCompare, { deep: true })
+onMounted(fetchCompare)
 
 function formatPrice(val) {
   if (val == null) return '–'
@@ -111,29 +178,29 @@ function formatPrice(val) {
 }
 
 function getStorePrice(item, storeId) {
-  return item.storePrices?.[storeId] ?? null
+  const breakdown = compareData.value?.storeBreakdowns?.find(s => s.storeId === storeId)
+  const line = breakdown?.items?.find(i => i.productId === item.id)
+  return line ? Number(line.unitPrice) : null
 }
 
 function isBestPrice(item, storeId) {
-  const prices = Object.values(item.storePrices || {}).filter(Boolean)
-  const min = Math.min(...prices)
-  return item.storePrices?.[storeId] === min
+  const prices = stores.value
+    .map(s => getStorePrice(item, s.id))
+    .filter(p => p != null)
+  if (!prices.length) return false
+  return getStorePrice(item, storeId) === Math.min(...prices)
 }
 
 function getSubtotal(storeId) {
-  return basketItems.value.reduce((sum, item) => {
-    const p = getStorePrice(item, storeId)
-    return sum + (p ? p * item.quantity : 0)
-  }, 0)
+  const breakdown = compareData.value?.storeBreakdowns?.find(s => s.storeId === storeId)
+  return breakdown ? Number(breakdown.storeTotal) : 0
 }
 
 function isBestStore(storeId) {
-  const totals = stores.value.map(s => ({ id: s.id, total: getSubtotal(s.id) })).filter(s => s.total > 0)
+  const totals = stores.value.map(s => getSubtotal(s.id)).filter(t => t > 0)
   if (!totals.length) return false
-  const min = Math.min(...totals.map(s => s.total))
-  return getSubtotal(storeId) === min
+  return getSubtotal(storeId) === Math.min(...totals)
 }
-
 
 </script>
 
@@ -183,6 +250,12 @@ function isBestStore(storeId) {
 }
 .basket-row:hover {
   background: var(--color-grey-50);
+}
+
+.save-basket-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-4);
 }
 
 td {

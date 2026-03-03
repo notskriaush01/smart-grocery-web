@@ -2,7 +2,8 @@
 INSERT INTO stores(name) VALUES
                              ('Tesco'),
                              ('Aldi'),
-                             ('Lidl');
+                             ('Lidl')
+                             ON CONFLICT DO NOTHING;
 
 -- ====== PRODUCTS ======
 -- columns: name, category, subcategory, unit_size, unit_unit
@@ -77,7 +78,8 @@ INSERT INTO products(name, category, subcategory, unit_size, unit_unit) VALUES
 ('Cola', 'Snacks & Beverages', 'Cold drinks', 1500, 'ML'),
 ('Orange Juice', 'Snacks & Beverages', 'Cold drinks', 1000, 'ML'),
 ('Still Water', 'Snacks & Beverages', 'Water & Functional Drinks', 1500, 'ML'),
-('Sports Drink', 'Snacks & Beverages', 'Water & Functional Drinks', 500, 'ML');
+('Sports Drink', 'Snacks & Beverages', 'Water & Functional Drinks', 500, 'ML')
+ON CONFLICT DO NOTHING;
 
 -- ====== PRICES ======
 -- One date for simplicity
@@ -142,4 +144,5 @@ INSERT INTO prices(product_id, store_id, price, date) VALUES
                                                           (55,1,4.85,'2026-02-11'), (55,2,4.53,'2026-02-11'), (55,3,4.20,'2026-02-11'),
                                                           (56,1,4.92,'2026-02-11'), (56,2,4.59,'2026-02-11'), (56,3,4.26,'2026-02-11'),
                                                           (57,1,4.99,'2026-02-11'), (57,2,4.66,'2026-02-11'), (57,3,4.32,'2026-02-11'),
-                                                          (58,1,5.06,'2026-02-11'), (58,2,4.72,'2026-02-11'), (58,3,4.38,'2026-02-11');
+                                                          (58,1,5.06,'2026-02-11'), (58,2,4.72,'2026-02-11'), (58,3,4.38,'2026-02-11')
+                                                          ON CONFLICT DO NOTHING;
