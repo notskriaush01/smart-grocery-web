@@ -10,74 +10,154 @@ INSERT INTO products(name, category, subcategory, unit_size, unit_unit) VALUES
 -- Fresh Food
 ('Apples', 'Fresh Food', 'Fruits', 1000, 'G'),
 ('Bananas', 'Fresh Food', 'Fruits', 1000, 'G'),
+('Oranges', 'Fresh Food', 'Fruits', 1000, 'G'),
+('Pears', 'Fresh Food', 'Fruits', 1000, 'G'),
+
 ('Tomatoes', 'Fresh Food', 'Vegetables', 1000, 'G'),
 ('Cucumbers', 'Fresh Food', 'Vegetables', 1000, 'G'),
+('Carrots', 'Fresh Food', 'Vegetables', 1000, 'G'),
+('Bell Peppers', 'Fresh Food', 'Vegetables', 1000, 'G'),
 
 -- Bakery
 ('White Bread', 'Bakery', 'Bread', 500, 'G'),
 ('Wholegrain Bread', 'Bakery', 'Bread', 500, 'G'),
+('Sourdough Bread', 'Bakery', 'Bread', 500, 'G'),
+('Rye Bread', 'Bakery', 'Bread', 500, 'G'),
+
 ('Croissants', 'Bakery', 'Pastries', 300, 'G'),
 ('Muffins', 'Bakery', 'Pastries', 300, 'G'),
+('Pain au Chocolat', 'Bakery', 'Pastries', 300, 'G'),
+('Cinnamon Rolls', 'Bakery', 'Pastries', 300, 'G'),
+
 ('Chocolate Cake', 'Bakery', 'Cakes', 1, 'PCS'),
 ('Cheesecake', 'Bakery', 'Cakes', 1, 'PCS'),
+('Carrot Cake', 'Bakery', 'Cakes', 1, 'PCS'),
+('Lemon Cake', 'Bakery', 'Cakes', 1, 'PCS'),
 
 -- Dairy & Eggs
 ('Whole Milk', 'Dairy & Eggs', 'Milk', 1000, 'ML'),
 ('Skimmed Milk', 'Dairy & Eggs', 'Milk', 1000, 'ML'),
+('Lactose Free Milk', 'Dairy & Eggs', 'Milk', 1000, 'ML'),
+('Oat Milk', 'Dairy & Eggs', 'Milk', 1000, 'ML'),
+
 ('Cheddar Cheese', 'Dairy & Eggs', 'Cheese', 400, 'G'),
 ('Mozzarella', 'Dairy & Eggs', 'Cheese', 250, 'G'),
+('Gouda Cheese', 'Dairy & Eggs', 'Cheese', 300, 'G'),
+('Edam Cheese', 'Dairy & Eggs', 'Cheese', 300, 'G'),
+
 ('Greek Yoghurt', 'Dairy & Eggs', 'Yoghurt', 500, 'G'),
 ('Strawberry Yoghurt', 'Dairy & Eggs', 'Yoghurt', 150, 'G'),
+('Natural Yoghurt', 'Dairy & Eggs', 'Yoghurt', 500, 'G'),
+('Blueberry Yoghurt', 'Dairy & Eggs', 'Yoghurt', 500, 'G'),
+
 ('Salted Butter', 'Dairy & Eggs', 'Butter', 250, 'G'),
 ('Unsalted Butter', 'Dairy & Eggs', 'Butter', 250, 'G'),
+('Spreadable Butter', 'Dairy & Eggs', 'Butter', 250, 'G'),
+('Irish Butter', 'Dairy & Eggs', 'Butter', 250, 'G'),
 
 -- Meat & Seafood
 ('Beef Mince', 'Meat & Seafood', 'Beef', 500, 'G'),
 ('Beef Steak', 'Meat & Seafood', 'Beef', 400, 'G'),
+('Beef Burgers', 'Meat & Seafood', 'Beef', 500, 'G'),
+('Beef Strips', 'Meat & Seafood', 'Beef', 500, 'G'),
+
 ('Pork Chops', 'Meat & Seafood', 'Pork', 500, 'G'),
 ('Pork Sausages', 'Meat & Seafood', 'Pork', 500, 'G'),
+('Pork Mince', 'Meat & Seafood', 'Pork', 500, 'G'),
+('Pork Belly', 'Meat & Seafood', 'Pork', 500, 'G'),
+
 ('Chicken Breast', 'Meat & Seafood', 'Chicken', 500, 'G'),
 ('Chicken Thighs', 'Meat & Seafood', 'Chicken', 600, 'G'),
+('Chicken Wings', 'Meat & Seafood', 'Chicken', 500, 'G'),
+('Chicken Drumsticks', 'Meat & Seafood', 'Chicken', 500, 'G'),
+
 ('Turkey Slices', 'Meat & Seafood', 'Turkey', 200, 'G'),
 ('Turkey Mince', 'Meat & Seafood', 'Turkey', 500, 'G'),
+('Turkey Breast', 'Meat & Seafood', 'Turkey', 500, 'G'),
+('Turkey Burgers', 'Meat & Seafood', 'Turkey', 500, 'G'),
+
 ('Salmon Fillet', 'Meat & Seafood', 'Fish', 400, 'G'),
 ('Cod Fillet', 'Meat & Seafood', 'Fish', 400, 'G'),
+('Haddock Fillet', 'Meat & Seafood', 'Fish', 400, 'G'),
+('Tilapia Fillet', 'Meat & Seafood', 'Fish', 400, 'G'),
+
 ('Ham Slices', 'Meat & Seafood', 'Cold Cuts', 200, 'G'),
 ('Salami', 'Meat & Seafood', 'Cold Cuts', 200, 'G'),
+('Turkey Ham', 'Meat & Seafood', 'Cold Cuts', 200, 'G'),
+('Chicken Ham', 'Meat & Seafood', 'Cold Cuts', 200, 'G'),
 
 -- Frozen Food
 ('Frozen Pizza', 'Frozen Food', 'Frozen Meals', 1, 'PCS'),
 ('Frozen Lasagna', 'Frozen Food', 'Frozen Meals', 1, 'PCS'),
+('Frozen Mac & Cheese', 'Frozen Food', 'Frozen Meals', 1, 'PCS'),
+('Frozen Curry', 'Frozen Food', 'Frozen Meals', 1, 'PCS'),
+
 ('Chicken Nuggets', 'Frozen Food', 'Finger Foods', 500, 'G'),
 ('Fish Fingers', 'Frozen Food', 'Finger Foods', 450, 'G'),
+('Mozzarella Sticks', 'Frozen Food', 'Finger Foods', 500, 'G'),
+('Onion Rings', 'Frozen Food', 'Finger Foods', 500, 'G'),
+
 ('Frozen Peas', 'Frozen Food', 'Vegetables', 750, 'G'),
 ('Frozen Mixed Veg', 'Frozen Food', 'Vegetables', 750, 'G'),
+('Frozen Broccoli', 'Frozen Food', 'Vegetables', 750, 'G'),
+('Frozen Spinach', 'Frozen Food', 'Vegetables', 750, 'G'),
+
 ('Vanilla Ice Cream', 'Frozen Food', 'Ice Cream', 1000, 'ML'),
 ('Chocolate Ice Cream', 'Frozen Food', 'Ice Cream', 1000, 'ML'),
+('Strawberry Ice Cream', 'Frozen Food', 'Ice Cream', 1000, 'ML'),
+('Mint Ice Cream', 'Frozen Food', 'Ice Cream', 1000, 'ML'),
 
 -- Pantry Items
 ('Pasta Spaghetti', 'Pantry Items', 'Grains & Pasta', 500, 'G'),
 ('Basmati Rice', 'Pantry Items', 'Grains & Pasta', 1000, 'G'),
+('Penne Pasta', 'Pantry Items', 'Grains & Pasta', 500, 'G'),
+('Jasmine Rice', 'Pantry Items', 'Grains & Pasta', 1000, 'G'),
+
 ('Plain Flour', 'Pantry Items', 'Baking supplies', 1000, 'G'),
 ('Baking Powder', 'Pantry Items', 'Baking supplies', 100, 'G'),
+('Brown Sugar', 'Pantry Items', 'Baking supplies', 1000, 'G'),
+('Icing Sugar', 'Pantry Items', 'Baking supplies', 1000, 'G'),
+
 ('Canned Tomatoes', 'Pantry Items', 'Canned Food', 400, 'G'),
 ('Canned Tuna', 'Pantry Items', 'Canned Food', 160, 'G'),
+('Canned Corn', 'Pantry Items', 'Canned Food', 400, 'G'),
+('Canned Beans', 'Pantry Items', 'Canned Food', 400, 'G'),
+
 ('Tomato Ketchup', 'Pantry Items', 'Sauces & Condiments', 500, 'ML'),
 ('Mayonnaise', 'Pantry Items', 'Sauces & Condiments', 400, 'G'),
+('BBQ Sauce', 'Pantry Items', 'Sauces & Condiments', 500, 'ML'),
+('Soy Sauce', 'Pantry Items', 'Sauces & Condiments', 500, 'ML'),
+
 ('Black Pepper', 'Pantry Items', 'Spices & Seasonings', 50, 'G'),
 ('Paprika', 'Pantry Items', 'Spices & Seasonings', 50, 'G'),
+('Garlic Powder', 'Pantry Items', 'Spices & Seasonings', 50, 'G'),
+('Chili Flakes', 'Pantry Items', 'Spices & Seasonings', 50, 'G'),
 
 -- Snacks & Beverages
 ('Milk Chocolate Bar', 'Snacks & Beverages', 'Sweet snacks', 100, 'G'),
 ('Chocolate Cookies', 'Snacks & Beverages', 'Sweet snacks', 200, 'G'),
+('Chocolate Wafers', 'Snacks & Beverages', 'Sweet snacks', 150, 'G'),
+('Caramel Biscuits', 'Snacks & Beverages', 'Sweet snacks', 150, 'G'),
+
 ('Salted Crisps', 'Snacks & Beverages', 'Salty snacks', 150, 'G'),
 ('Tortilla Chips', 'Snacks & Beverages', 'Salty snacks', 200, 'G'),
+('Pretzels', 'Snacks & Beverages', 'Salty snacks', 200, 'G'),
+('Cheese Crackers', 'Snacks & Beverages', 'Salty snacks', 200, 'G'),
+
 ('Instant Coffee', 'Snacks & Beverages', 'Hot drinks', 200, 'G'),
 ('Black Tea Bags', 'Snacks & Beverages', 'Hot drinks', 100, 'G'),
+('Ground Coffee', 'Snacks & Beverages', 'Hot drinks', 200, 'G'),
+('Green Tea', 'Snacks & Beverages', 'Hot drinks', 100, 'G'),
+
 ('Cola', 'Snacks & Beverages', 'Cold drinks', 1500, 'ML'),
 ('Orange Juice', 'Snacks & Beverages', 'Cold drinks', 1000, 'ML'),
+('Lemonade', 'Snacks & Beverages', 'Cold drinks', 1500, 'ML'),
+('Apple Juice', 'Snacks & Beverages', 'Cold drinks', 1000, 'ML'),
+
 ('Still Water', 'Snacks & Beverages', 'Water & Functional Drinks', 1500, 'ML'),
-('Sports Drink', 'Snacks & Beverages', 'Water & Functional Drinks', 500, 'ML');
+('Sports Drink', 'Snacks & Beverages', 'Water & Functional Drinks', 500, 'ML'),
+('Sparkling Water', 'Snacks & Beverages', 'Water & Functional Drinks', 1500, 'ML'),
+('Vitamin Drink', 'Snacks & Beverages', 'Water & Functional Drinks', 500, 'ML');
 
 -- ====== PRICES ======
 -- One date for simplicity
@@ -142,4 +222,63 @@ INSERT INTO prices(product_id, store_id, price, date) VALUES
                                                           (55,1,4.85,'2026-02-11'), (55,2,4.53,'2026-02-11'), (55,3,4.20,'2026-02-11'),
                                                           (56,1,4.92,'2026-02-11'), (56,2,4.59,'2026-02-11'), (56,3,4.26,'2026-02-11'),
                                                           (57,1,4.99,'2026-02-11'), (57,2,4.66,'2026-02-11'), (57,3,4.32,'2026-02-11'),
-                                                          (58,1,5.06,'2026-02-11'), (58,2,4.72,'2026-02-11'), (58,3,4.38,'2026-02-11');
+                                                          (58,1,5.06,'2026-02-11'), (58,2,4.72,'2026-02-11'), (58,3,4.38,'2026-02-11'),
+                                                          (59,1,2.05,'2026-02-11'), (59,2,1.96,'2026-02-11'), (59,3,1.88,'2026-02-11'),
+                                                          (60,1,2.12,'2026-02-11'), (60,2,2.03,'2026-02-11'), (60,3,1.94,'2026-02-11'),
+                                                          (61,1,2.19,'2026-02-11'), (61,2,2.10,'2026-02-11'), (61,3,2.00,'2026-02-11'),
+                                                          (62,1,2.26,'2026-02-11'), (62,2,2.16,'2026-02-11'), (62,3,2.06,'2026-02-11'),
+                                                          (63,1,2.33,'2026-02-11'), (63,2,2.22,'2026-02-11'), (63,3,2.12,'2026-02-11'),
+                                                          (64,1,2.40,'2026-02-11'), (64,2,2.29,'2026-02-11'), (64,3,2.18,'2026-02-11'),
+                                                          (65,1,2.47,'2026-02-11'), (65,2,2.35,'2026-02-11'), (65,3,2.24,'2026-02-11'),
+                                                          (66,1,2.54,'2026-02-11'), (66,2,2.41,'2026-02-11'), (66,3,2.30,'2026-02-11'),
+                                                          (67,1,2.61,'2026-02-11'), (67,2,2.48,'2026-02-11'), (67,3,2.36,'2026-02-11'),
+                                                          (68,1,2.68,'2026-02-11'), (68,2,2.54,'2026-02-11'), (68,3,2.42,'2026-02-11'),
+                                                          (69,1,2.75,'2026-02-11'), (69,2,2.60,'2026-02-11'), (69,3,2.48,'2026-02-11'),
+                                                          (70,1,2.82,'2026-02-11'), (70,2,2.67,'2026-02-11'), (70,3,2.54,'2026-02-11'),
+                                                          (71,1,2.89,'2026-02-11'), (71,2,2.73,'2026-02-11'), (71,3,2.60,'2026-02-11'),
+                                                          (72,1,2.96,'2026-02-11'), (72,2,2.79,'2026-02-11'), (72,3,2.66,'2026-02-11'),
+                                                          (73,1,3.03,'2026-02-11'), (73,2,2.86,'2026-02-11'), (73,3,2.72,'2026-02-11'),
+                                                          (74,1,3.10,'2026-02-11'), (74,2,2.92,'2026-02-11'), (74,3,2.78,'2026-02-11'),
+                                                          (75,1,3.17,'2026-02-11'), (75,2,2.98,'2026-02-11'), (75,3,2.84,'2026-02-11'),
+                                                          (76,1,3.24,'2026-02-11'), (76,2,3.05,'2026-02-11'), (76,3,2.90,'2026-02-11'),
+                                                          (77,1,3.31,'2026-02-11'), (77,2,3.11,'2026-02-11'), (77,3,2.96,'2026-02-11'),
+                                                          (78,1,3.38,'2026-02-11'), (78,2,3.17,'2026-02-11'), (78,3,3.02,'2026-02-11'),
+                                                          (79,1,3.45,'2026-02-11'), (79,2,3.24,'2026-02-11'), (79,3,3.08,'2026-02-11'),
+                                                          (80,1,3.52,'2026-02-11'), (80,2,3.30,'2026-02-11'), (80,3,3.14,'2026-02-11'),
+                                                          (81,1,3.59,'2026-02-11'), (81,2,3.36,'2026-02-11'), (81,3,3.20,'2026-02-11'),
+                                                          (82,1,3.66,'2026-02-11'), (82,2,3.43,'2026-02-11'), (82,3,3.26,'2026-02-11'),
+                                                          (83,1,3.73,'2026-02-11'), (83,2,3.49,'2026-02-11'), (83,3,3.32,'2026-02-11'),
+                                                          (84,1,3.80,'2026-02-11'), (84,2,3.55,'2026-02-11'), (84,3,3.38,'2026-02-11'),
+                                                          (85,1,3.87,'2026-02-11'), (85,2,3.62,'2026-02-11'), (85,3,3.44,'2026-02-11'),
+                                                          (86,1,3.94,'2026-02-11'), (86,2,3.68,'2026-02-11'), (86,3,3.50,'2026-02-11'),
+                                                          (87,1,4.01,'2026-02-11'), (87,2,3.74,'2026-02-11'), (87,3,3.56,'2026-02-11'),
+                                                          (88,1,4.08,'2026-02-11'), (88,2,3.81,'2026-02-11'), (88,3,3.62,'2026-02-11'),
+                                                          (89,1,4.15,'2026-02-11'), (89,2,3.87,'2026-02-11'), (89,3,3.68,'2026-02-11'),
+                                                          (90,1,4.22,'2026-02-11'), (90,2,3.93,'2026-02-11'), (90,3,3.74,'2026-02-11'),
+                                                          (91,1,4.29,'2026-02-11'), (91,2,4.00,'2026-02-11'), (91,3,3.80,'2026-02-11'),
+                                                          (92,1,4.36,'2026-02-11'), (92,2,4.06,'2026-02-11'), (92,3,3.86,'2026-02-11'),
+                                                          (93,1,4.43,'2026-02-11'), (93,2,4.12,'2026-02-11'), (93,3,3.92,'2026-02-11'),
+                                                          (94,1,4.50,'2026-02-11'), (94,2,4.19,'2026-02-11'), (94,3,3.98,'2026-02-11'),
+                                                          (95,1,4.57,'2026-02-11'), (95,2,4.25,'2026-02-11'), (95,3,4.04,'2026-02-11'),
+                                                          (96,1,4.64,'2026-02-11'), (96,2,4.31,'2026-02-11'), (96,3,4.10,'2026-02-11'),
+                                                          (97,1,4.71,'2026-02-11'), (97,2,4.38,'2026-02-11'), (97,3,4.16,'2026-02-11'),
+                                                          (98,1,4.78,'2026-02-11'), (98,2,4.44,'2026-02-11'), (98,3,4.22,'2026-02-11'),
+                                                          (99,1,4.85,'2026-02-11'), (99,2,4.50,'2026-02-11'), (99,3,4.28,'2026-02-11'),
+                                                          (100,1,4.92,'2026-02-11'), (100,2,4.57,'2026-02-11'), (100,3,4.34,'2026-02-11'),
+                                                          (101,1,4.99,'2026-02-11'), (101,2,4.63,'2026-02-11'), (101,3,4.40,'2026-02-11'),
+                                                          (102,1,5.06,'2026-02-11'), (102,2,4.69,'2026-02-11'), (102,3,4.46,'2026-02-11'),
+                                                          (103,1,5.13,'2026-02-11'), (103,2,4.76,'2026-02-11'), (103,3,4.52,'2026-02-11'),
+                                                          (104,1,5.20,'2026-02-11'), (104,2,4.82,'2026-02-11'), (104,3,4.58,'2026-02-11'),
+                                                          (105,1,5.27,'2026-02-11'), (105,2,4.88,'2026-02-11'), (105,3,4.64,'2026-02-11'),
+                                                          (106,1,5.34,'2026-02-11'), (106,2,4.95,'2026-02-11'), (106,3,4.70,'2026-02-11'),
+                                                          (107,1,5.41,'2026-02-11'), (107,2,5.01,'2026-02-11'), (107,3,4.76,'2026-02-11'),
+                                                          (108,1,5.48,'2026-02-11'), (108,2,5.07,'2026-02-11'), (108,3,4.82,'2026-02-11'),
+                                                          (109,1,5.55,'2026-02-11'), (109,2,5.14,'2026-02-11'), (109,3,4.88,'2026-02-11'),
+                                                          (110,1,5.62,'2026-02-11'), (110,2,5.20,'2026-02-11'), (110,3,4.94,'2026-02-11'),
+                                                          (111,1,5.69,'2026-02-11'), (111,2,5.26,'2026-02-11'), (111,3,5.00,'2026-02-11'),
+                                                          (112,1,5.76,'2026-02-11'), (112,2,5.33,'2026-02-11'), (112,3,5.06,'2026-02-11'),
+                                                          (113,1,5.83,'2026-02-11'), (113,2,5.39,'2026-02-11'), (113,3,5.12,'2026-02-11'),
+                                                          (114,1,5.90,'2026-02-11'), (114,2,5.45,'2026-02-11'), (114,3,5.18,'2026-02-11'),
+                                                          (115,1,5.97,'2026-02-11'), (115,2,5.52,'2026-02-11'), (115,3,5.24,'2026-02-11'),
+                                                          (116,1,6.04,'2026-02-11'), (116,2,5.58,'2026-02-11'), (116,3,5.30,'2026-02-11');
+

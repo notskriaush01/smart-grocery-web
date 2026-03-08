@@ -1,18 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Cheddar Sandwich",
-    "tag": "Lunch",
-    "imageUrl": "https://example.com/sandwich.jpg",
-    "shortDescription": "Quick sandwich with cheese and tomatoes.",
+    "title": "Banana Yoghurt Breakfast Bowl",
+    "tag": "Breakfast",
+    "imageUrl": "https://example.com/banana-yoghurt.jpg",
+    "shortDescription": "Healthy breakfast bowl with bananas and Greek yoghurt.",
     "prepMinutes": 5,
     "cookMinutes": 0,
     "difficulty": "Easy",
     "steps": [
-      "Take two slices of bread.",
-      "Add cheddar cheese.",
-      "Add sliced tomatoes.",
-      "Serve."
+      "Start by peeling the bananas and slicing them into small round pieces. Place the banana slices into a medium sized bowl.",
+      "Take the Greek Yoghurt and add it on top of the bananas. Use a spoon to spread it evenly so the fruit is nicely covered.",
+      "Cut a fresh apple into small cubes and sprinkle it over the yoghurt and bananas. This adds extra freshness and texture.",
+      "Gently mix everything together so that the fruit is evenly distributed throughout the yoghurt.",
+      "Serve immediately as a refreshing and nutritious breakfast."
+    ],
+    "ingredients": [
+      { "productName": "Bananas", "quantity": 1 },
+      { "productName": "Greek Yoghurt", "quantity": 1 },
+      { "productName": "Apples", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Cheese Breakfast Toast",
+    "tag": "Breakfast",
+    "imageUrl": "https://example.com/cheese-toast.jpg",
+    "shortDescription": "Warm breakfast toast with melted cheddar cheese.",
+    "prepMinutes": 5,
+    "cookMinutes": 5,
+    "difficulty": "Easy",
+    "steps": [
+      "Take two slices of White Bread and place them in a toaster or a hot pan. Toast the bread until it becomes golden and slightly crispy.",
+      "Place slices of Cheddar Cheese on top of the hot bread while it is still warm so the cheese begins to melt.",
+      "Slice a fresh tomato into thin rounds and place the slices on top of the cheese.",
+      "If desired, heat the toast in a pan for another minute to melt the cheese further and warm the tomatoes.",
+      "Serve the toast warm for a quick and satisfying breakfast."
     ],
     "ingredients": [
       { "productName": "White Bread", "quantity": 1 },
@@ -20,24 +44,313 @@
       { "productName": "Tomatoes", "quantity": 1 }
     ]
   },
+
   {
-    "id": 2,
-    "title": "Pasta with Tomato Sauce",
-    "tag": "Dinner",
-    "imageUrl": "https://example.com/pasta.jpg",
-    "shortDescription": "Simple pasta with canned tomatoes.",
-    "prepMinutes": 10,
-    "cookMinutes": 15,
+    "id": 3,
+    "title": "Apple Cinnamon Roll Breakfast",
+    "tag": "Breakfast",
+    "imageUrl": "https://example.com/cinnamon-breakfast.jpg",
+    "shortDescription": "Sweet breakfast with cinnamon rolls and apples.",
+    "prepMinutes": 5,
+    "cookMinutes": 5,
     "difficulty": "Easy",
     "steps": [
-      "Boil spaghetti until ready.",
-      "Heat canned tomatoes in a pan.",
-      "Mix pasta with sauce.",
-      "Serve."
+      "Place Cinnamon Rolls on a plate and warm them slightly in the microwave or oven so they become soft and aromatic.",
+      "Slice a fresh apple into small pieces or thin slices.",
+      "Arrange the apple slices next to the warm cinnamon rolls on the plate.",
+      "Add a spoon of Natural Yoghurt on the side to balance the sweetness and add a creamy texture.",
+      "Enjoy this sweet breakfast combination with a glass of milk."
     ],
     "ingredients": [
-      { "productName": "Pasta Spaghetti", "quantity": 1 },
-      { "productName": "Canned Tomatoes", "quantity": 2 }
+      { "productName": "Cinnamon Rolls", "quantity": 1 },
+      { "productName": "Apples", "quantity": 1 },
+      { "productName": "Natural Yoghurt", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "Ham Cheese Sandwich",
+    "tag": "Lunch",
+    "imageUrl": "https://example.com/ham-sandwich.jpg",
+    "shortDescription": "Classic lunch sandwich with ham and cheese.",
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Lay two slices of Wholegrain Bread on a clean surface.",
+      "Spread a thin layer of butter on each slice of bread for extra flavor.",
+      "Add Ham Slices on one piece of bread, distributing them evenly so each bite has ham.",
+      "Place slices of Gouda Cheese on top of the ham.",
+      "Add thin slices of tomatoes for freshness and close the sandwich with the second slice of bread.",
+      "Cut the sandwich in half and serve."
+    ],
+    "ingredients": [
+      { "productName": "Wholegrain Bread", "quantity": 1 },
+      { "productName": "Ham Slices", "quantity": 1 },
+      { "productName": "Gouda Cheese", "quantity": 1 },
+      { "productName": "Tomatoes", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Chicken Bread Lunch Plate",
+    "tag": "Lunch",
+    "imageUrl": "https://example.com/chicken-lunch.jpg",
+    "shortDescription": "Simple chicken and bread lunch plate.",
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "difficulty": "Easy",
+    "steps": [
+      "Start by cooking Chicken Breast in a hot pan until it becomes golden on the outside and fully cooked inside.",
+      "Slice the cooked chicken breast into small strips.",
+      "Place slices of Sourdough Bread on a plate.",
+      "Arrange the chicken strips on top of the bread and add slices of cucumber and tomato.",
+      "Serve immediately while the chicken is still warm."
+    ],
+    "ingredients": [
+      { "productName": "Chicken Breast", "quantity": 1 },
+      { "productName": "Sourdough Bread", "quantity": 1 },
+      { "productName": "Cucumbers", "quantity": 1 },
+      { "productName": "Tomatoes", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "Salami Cheese Rye Sandwich",
+    "tag": "Lunch",
+    "imageUrl": "https://example.com/salami-sandwich.jpg",
+    "shortDescription": "Rye bread sandwich with salami and cheese.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Place two slices of Rye Bread on a cutting board.",
+      "Add several slices of Salami on one slice of bread.",
+      "Layer Edam Cheese slices on top of the salami.",
+      "Add thin slices of cucumber and tomato for freshness.",
+      "Close the sandwich and cut it diagonally before serving."
+    ],
+    "ingredients": [
+      { "productName": "Rye Bread", "quantity": 1 },
+      { "productName": "Salami", "quantity": 1 },
+      { "productName": "Edam Cheese", "quantity": 1 },
+      { "productName": "Cucumbers", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 7,
+    "title": "Chicken Tomato Dinner Plate",
+    "tag": "Dinner",
+    "imageUrl": "https://example.com/chicken-dinner.jpg",
+    "shortDescription": "Warm dinner with chicken and vegetables.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "Medium",
+    "steps": [
+      "Heat a pan over medium heat and add a small amount of butter.",
+      "Place Chicken Thighs in the pan and cook them slowly until they become golden brown.",
+      "Slice carrots and bell peppers into thin strips.",
+      "Add the vegetables to the pan and cook them together with the chicken.",
+      "Cook everything until the vegetables become soft and the chicken is fully cooked.",
+      "Serve the chicken together with the vegetables."
+    ],
+    "ingredients": [
+      { "productName": "Chicken Thighs", "quantity": 1 },
+      { "productName": "Carrots", "quantity": 1 },
+      { "productName": "Bell Peppers", "quantity": 1 },
+      { "productName": "Salted Butter", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 8,
+    "title": "Beef Steak Dinner",
+    "tag": "Dinner",
+    "imageUrl": "https://example.com/steak.jpg",
+    "shortDescription": "Simple beef steak with vegetables.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "Medium",
+    "steps": [
+      "Heat a frying pan over high heat and melt a small amount of butter.",
+      "Place the Beef Steak in the hot pan and cook it for several minutes on each side.",
+      "Slice tomatoes and cucumbers while the steak cooks.",
+      "After the steak is cooked to your preference, remove it from the pan and let it rest for a few minutes.",
+      "Serve the steak with the fresh sliced vegetables on the side."
+    ],
+    "ingredients": [
+      { "productName": "Beef Steak", "quantity": 1 },
+      { "productName": "Tomatoes", "quantity": 1 },
+      { "productName": "Cucumbers", "quantity": 1 },
+      { "productName": "Unsalted Butter", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 9,
+    "title": "Salmon Vegetable Dinner",
+    "tag": "Dinner",
+    "imageUrl": "https://example.com/salmon.jpg",
+    "shortDescription": "Pan fried salmon with fresh vegetables.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "Medium",
+    "steps": [
+      "Heat a pan over medium heat and add a small piece of butter.",
+      "Place the Salmon Fillet into the pan and cook it slowly until the fish becomes golden and tender.",
+      "Slice carrots and bell peppers into small pieces.",
+      "Cook the vegetables in the same pan for several minutes.",
+      "Serve the salmon fillet with the vegetables on the side."
+    ],
+    "ingredients": [
+      { "productName": "Salmon Fillet", "quantity": 1 },
+      { "productName": "Carrots", "quantity": 1 },
+      { "productName": "Bell Peppers", "quantity": 1 },
+      { "productName": "Salted Butter", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 10,
+    "title": "Chocolate Cake Dessert",
+    "tag": "Dessert",
+    "imageUrl": "https://example.com/chocolate-cake.jpg",
+    "shortDescription": "Rich chocolate cake dessert.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Place a slice of Chocolate Cake on a dessert plate.",
+      "Add a spoon of Strawberry Yoghurt next to the cake for a fruity flavor.",
+      "Slice a banana into thin pieces.",
+      "Place the banana slices around the cake for decoration.",
+      "Serve immediately as a sweet dessert."
+    ],
+    "ingredients": [
+      { "productName": "Chocolate Cake", "quantity": 1 },
+      { "productName": "Strawberry Yoghurt", "quantity": 1 },
+      { "productName": "Bananas", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 11,
+    "title": "Cheesecake Fruit Dessert",
+    "tag": "Dessert",
+    "imageUrl": "https://example.com/cheesecake.jpg",
+    "shortDescription": "Cheesecake served with fresh fruit.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Place a slice of Cheesecake on a plate.",
+      "Cut apples and pears into small cubes.",
+      "Arrange the fruit pieces around the cheesecake.",
+      "Add a spoon of Natural Yoghurt for extra creaminess.",
+      "Serve chilled for the best flavor."
+    ],
+    "ingredients": [
+      { "productName": "Cheesecake", "quantity": 1 },
+      { "productName": "Apples", "quantity": 1 },
+      { "productName": "Pears", "quantity": 1 },
+      { "productName": "Natural Yoghurt", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 12,
+    "title": "Carrot Cake Dessert Plate",
+    "tag": "Dessert",
+    "imageUrl": "https://example.com/carrot-cake.jpg",
+    "shortDescription": "Carrot cake with yoghurt and fruit.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Place a slice of Carrot Cake on a dessert plate.",
+      "Add a spoon of Blueberry Yoghurt next to the cake.",
+      "Slice an orange into small pieces.",
+      "Arrange the orange pieces around the cake to add freshness and color.",
+      "Serve as a sweet and refreshing dessert."
+    ],
+    "ingredients": [
+      { "productName": "Carrot Cake", "quantity": 1 },
+      { "productName": "Blueberry Yoghurt", "quantity": 1 },
+      { "productName": "Oranges", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 13,
+    "title": "Vegan Fruit Bowl",
+    "tag": "Vegan",
+    "imageUrl": "https://example.com/fruit-bowl.jpg",
+    "shortDescription": "Fresh vegan fruit bowl.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Peel bananas and slice them into small pieces.",
+      "Cut apples and pears into cubes.",
+      "Place all the fruit into a large bowl.",
+      "Mix the fruits gently so they are evenly distributed.",
+      "Serve as a refreshing vegan snack."
+    ],
+    "ingredients": [
+      { "productName": "Bananas", "quantity": 1 },
+      { "productName": "Apples", "quantity": 1 },
+      { "productName": "Pears", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 14,
+    "title": "Vegan Vegetable Sandwich",
+    "tag": "Vegan",
+    "imageUrl": "https://example.com/vegan-sandwich.jpg",
+    "shortDescription": "Healthy vegan vegetable sandwich.",
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Take two slices of Wholegrain Bread.",
+      "Slice cucumbers, tomatoes and bell peppers into thin pieces.",
+      "Place the vegetables evenly on one slice of bread.",
+      "Cover with the second slice of bread and press gently.",
+      "Cut the sandwich in half and serve."
+    ],
+    "ingredients": [
+      { "productName": "Wholegrain Bread", "quantity": 1 },
+      { "productName": "Cucumbers", "quantity": 1 },
+      { "productName": "Tomatoes", "quantity": 1 },
+      { "productName": "Bell Peppers", "quantity": 1 }
+    ]
+  },
+
+  {
+    "id": 15,
+    "title": "Vegan Oat Milk Fruit Drink",
+    "tag": "Vegan",
+    "imageUrl": "https://example.com/oat-drink.jpg",
+    "shortDescription": "Refreshing oat milk fruit drink.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "Easy",
+    "steps": [
+      "Pour Oat Milk into a blender.",
+      "Slice bananas and apples into smaller pieces.",
+      "Add the fruit into the blender with the oat milk.",
+      "Blend everything together until the drink becomes smooth and creamy.",
+      "Pour into a glass and serve immediately."
+    ],
+    "ingredients": [
+      { "productName": "Oat Milk", "quantity": 1 },
+      { "productName": "Bananas", "quantity": 1 },
+      { "productName": "Apples", "quantity": 1 }
     ]
   }
 ]

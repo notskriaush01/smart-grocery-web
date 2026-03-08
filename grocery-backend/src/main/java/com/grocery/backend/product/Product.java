@@ -53,6 +53,14 @@ public class Product {
     public BigDecimal getUnitSize() { return unitSize; }
     public String getUnitUnit() { return unitUnit; }
 
+//    // auto generated photos from unsplash
+//    @Transient
+//    public String getImageUrl() {
+//        if (this.name == null) return null;
+//        String query = this.name.toLowerCase() .replace(" ", "+");
+//        return "https://source.unsplash.com/400x400/?" + query + ",food";
+//    }
+
     public void setId(Long id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setCategory(String category) { this.category = category; }
