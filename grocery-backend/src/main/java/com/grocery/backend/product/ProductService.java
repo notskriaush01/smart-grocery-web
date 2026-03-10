@@ -176,7 +176,7 @@ public class ProductService {
         dto.subcategory = product.getSubcategory();
         dto.brand       = product.getSubcategory(); // stand-in until brand column added
         dto.description = product.getUnitSize() + " " + product.getUnitUnit().toLowerCase();
-        dto.imageUrl    = null;
+        dto.imageUrl = product.getImageUrl();
 
         dto.lowestPrice = prices.stream()
                 .map(Price::getPrice)
