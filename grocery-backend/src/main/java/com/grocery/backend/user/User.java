@@ -24,6 +24,9 @@ public class User {
     @Column(columnDefinition = "TEXT", name = "basket_json")
     private String basketJson;
 
+    @Column(columnDefinition = "TEXT", name = "shopping_lists_json")
+    private String shoppingListsJson = "[]";
+
     public User() {}
 
     public User(String username, String email, String passwordHash) {
@@ -32,6 +35,9 @@ public class User {
         this.passwordHash = passwordHash;
         this.basketJson = "[]";
     }
+
+    public String getShoppingListsJson() { return shoppingListsJson; }
+    public void setShoppingListsJson(String shoppingListsJson) { this.shoppingListsJson = shoppingListsJson; }
 
     public Long getId() { return id; }
     public String getUsername() { return username; }

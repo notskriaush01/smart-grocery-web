@@ -2,7 +2,8 @@
 INSERT INTO stores(name) VALUES
                              ('Tesco'),
                              ('Aldi'),
-                             ('Lidl');
+                             ('Lidl')
+                             ON CONFLICT DO NOTHING;
 
 -- ====== PRODUCTS ======
 -- columns: name, category, subcategory, unit_size, unit_unit

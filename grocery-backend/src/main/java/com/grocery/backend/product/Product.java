@@ -28,6 +28,9 @@ public class Product {
     @Column(name = "unit_unit", nullable = false)
     private String unitUnit; // "G", "ML", "PCS"
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     public Product() {}
 
     public Product(String name, String category, String subcategory) {
@@ -52,6 +55,8 @@ public class Product {
     public String getSubcategory() { return subcategory; }
     public BigDecimal getUnitSize() { return unitSize; }
     public String getUnitUnit() { return unitUnit; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
 //    // auto generated photos from unsplash
 //    @Transient

@@ -1,30 +1,43 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <AppHeader
+    :basket-count="basketCount"
+    @open-auth="authOpen = true"
+  />
+  <RouterView />
+  <CookieConsentModal
+    v-if="showCookieModal"
+    @allow="handleCookieConsent('allow')"
+    @decline="handleCookieConsent('decline')"
+  />
+  <AuthSidebar v-model="authOpen" @login-success="onLoginSuccess" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import { onMounted, ref } from 'vue'
+import AppHeader from '@/components/AppHeader.vue'
+import CookieConsentModal from '@/components/CookieConsentModal.vue'
+
+const showCookieModal = ref(false)
+const COOKIE_CONSENT_KEY = 'cookie_consent'
+
+function handleCookieConsent(choice) {
+  localStorage.setItem(COOKIE_CONSENT_KEY, choice)
+  showCookieModal.value = false
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+onMounted(() => {
+  const savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY)
+  showCookieModal.value = !savedConsent
+})
+
+import AuthSidebar from '@/components/AuthSidebar.vue'
+import { useBasket } from '@/composables/useBasket.js'
+
+const { basketCount } = useBasket()
+const authOpen = ref(false)
+
+function onLoginSuccess(user) {
+  console.log('Logged in:', user)
+  // TODO: store user info when backend is ready
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+</script>

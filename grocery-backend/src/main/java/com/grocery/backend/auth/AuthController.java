@@ -3,8 +3,7 @@ package com.grocery.backend.auth;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/auth")
-@CrossOrigin(origins = "*")
+@RequestMapping("/auth")  
 public class AuthController {
 
     private final AuthService auth;
