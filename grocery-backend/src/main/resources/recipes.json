@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Banana Yoghurt Breakfast Bowl",
+    "title": "Banana Yoghurt Bowl",
     "tag": "Breakfast",
     "imageUrl": "/api/recipe-images/id1.png",
     "shortDescription": "Healthy breakfast bowl with bananas and Greek yoghurt.",
@@ -47,7 +47,7 @@
 
   {
     "id": 3,
-    "title": "Apple Cinnamon Roll Breakfast",
+    "title": "Apple Cinnamon Roll",
     "tag": "Breakfast",
     "imageUrl": "/api/recipe-images/id3.png",
     "shortDescription": "Sweet breakfast with cinnamon rolls and apples.",
@@ -119,7 +119,7 @@
 
   {
     "id": 6,
-    "title": "Salami Cheese Rye Sandwich",
+    "title": "Salami Cheese Sandwich",
     "tag": "Lunch",
     "imageUrl": "/api/recipe-images/id6.png",
     "shortDescription": "Rye bread sandwich with salami and cheese.",
