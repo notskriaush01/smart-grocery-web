@@ -68,7 +68,7 @@ public class Product {
                 .replace("&", "")
                 .replace(",", "");
 
-        return "https://smart-grocery-web.onrender.com/product-images/" + fileName + ".png";
+        return "https://smart-grocery-web.onrender.com/api/product-images/" + fileName + ".png";
     }
 
 
