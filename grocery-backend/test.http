@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:8080
+@baseUrl = https://smart-grocery-web.onrender.com
 @userId = 2
 ### register
 POST {{baseUrl}}/auth/register
