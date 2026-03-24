@@ -1,4 +1,4 @@
-# 🚀 Smart Grocery Basket
+# 🚀 Smart Basket
 Save money on groceries and instantly generate recipes from your basket using AI.
 
 Full-stack web application that helps users optimize grocery shopping by comparing prices across stores and generating recipes based on selected products.
