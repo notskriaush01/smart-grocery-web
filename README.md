@@ -76,14 +76,12 @@ smart-grocery-web/
 ├── client/                 
 │   ├── src/
 │   ├── public/
-│   ├── vite.config.js
-│   └── package.json
+│   └── vite.config.js
 │
 ├── grocery-backend/         
 │   ├── src/
 │   ├── pom.xml
-│   ├── Dockerfile
-│   └── test.http
+│   └── Dockerfile
 │
 ├── docker-compose.yml       
 ├── .gitignore
