@@ -1,7 +1,7 @@
 # 🚀 Smart Grocery Basket
+Save money on groceries and instantly generate recipes from your basket using AI.
 
 Full-stack web application that helps users optimize grocery shopping by comparing prices across stores and generating recipes based on selected products.
-
 The project combines backend price analysis, user basket logic, authentication, and AI-powered recipe generation.
 
 ---
@@ -141,23 +141,22 @@ http://localhost:5173
 
 ## 🔌 Backend API
 
-### Get products
+Base URL:
+```
+http://localhost:8080/api
+```
+
+### Example endpoints
 ```
 GET /products
-```
-
-### Get stores
-```
 GET /stores
-```
-
-### Compare basket
-```
 POST /basket/compare
 ```
 
-Example:
+### Example request
 ```
+POST http://localhost:8080/api/basket/compare
+Content-Type: application/json
 {
   "items": [
     { "productId": 1, "quantity": 2 },
