@@ -100,7 +100,7 @@ smart-grocery-web/
 
 ## ▶️ Live Demo
 
-🔗 [Add your deployed link here]
+🔗 https://smartbasket-web.netlify.app
 
 ⚠️ If the site was inactive (~15 minutes), the server may sleep.  
 Please wait 1–3 minutes for it to restart.
@@ -114,20 +114,28 @@ Please wait 1–3 minutes for it to restart.
 - Git  
 
 ### Steps
+```
 git clone https://github.com/cherriesc/smart-grocery-web.git
 cd smart-grocery-web
 docker compose up --build
+```
 
 Backend:
+```
 http://localhost:8080
+```
 
 Frontend:
+```
 cd client
 npm install
 npm run dev
+```
 
 Open:
+```
 http://localhost:5173
+```
 
 ---
 
