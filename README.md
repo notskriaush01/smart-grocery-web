@@ -141,19 +141,30 @@ http://localhost:5173
 
 ## 🔌 Backend API
 
-### Get productsGET /products
+### Get products
+```
+GET /products
+```
 
-### Get storesGET /stores
+### Get stores
+```
+GET /stores
+```
 
-### Compare basketPOST /basket/compare
+### Compare basket
+```
+POST /basket/compare
+```
 
 Example:
+```
 {
   "items": [
     { "productId": 1, "quantity": 2 },
     { "productId": 2, "quantity": 1 }
   ]
 }
+```
 
 ---
 
