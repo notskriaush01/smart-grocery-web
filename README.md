@@ -24,36 +24,36 @@ This project solves these problems by:
 
 ## 💡 Key Features
 
-### 🛒 Smart Basket
+###  Smart Basket
 - Add products to a basket  
 - Calculate total cost across multiple stores  
 - Identify the cheapest store  
 
 ---
 
-### 📊 Price Comparison
+###  Price Comparison
 - Backend calculates basket prices  
 - Supports overlapping products  
 - Uses latest pricing data  
 
 ---
 
-### 🔐 Authentication & User Profile
+###  Authentication & User Profile
 - User login system  
 - AI available only for logged-in users  
-- Save generated recipes to profile  
-- Access saved recipes later  
+- Save the basket to profile  
+- Access saved baskets later  
 
 ---
 
-### 🍳 Recipe System
+###  Recipe System
 - Predefined recipes with ingredient mapping  
 - Ingredients linked to real products  
 - Add all ingredients to basket in one click  
 
 ---
 
-### 🤖 AI Recipe Generation
+###  AI Recipe Generation
 - Generate recipes based on basket  
 - Uses OpenAI API  
 - Returns structured output (ingredients + steps)  
@@ -84,6 +84,7 @@ This project solves these problems by:
 ---
 
 ## 🧱 Project Structure
+```
 smart-grocery-web/
 │
 ├── client/
@@ -94,7 +95,7 @@ smart-grocery-web/
 │
 ├── docker-compose.yml
 └── README.md
-
+```
 ---
 
 ## ▶️ Live Demo
@@ -161,8 +162,8 @@ Example:
 - Backend architecture design  
 - REST API implementation  
 - Basket price logic  
-- AI integration (OpenAI)  
-- Database design (PostgreSQL)  
+- AI integration 
+- Database design 
 - Docker setup  
 
 ---
@@ -170,7 +171,7 @@ Example:
 ## 👥 Team
 
 - Backend: Me  
-- Frontend: Team members (Vue, UI/UX, integration)
+- Frontend: Charreys https://github.com/cherriesc (Vue, UI/UX, integration)
 
 ---
 
