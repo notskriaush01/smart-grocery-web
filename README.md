@@ -4,6 +4,8 @@ Save money on groceries and instantly generate recipes from your basket using AI
 Full-stack web application that helps users optimize grocery shopping by comparing prices across stores and generating recipes based on selected products.
 The project combines backend price analysis, user basket logic, authentication, and AI-powered recipe generation.
 
+![Live Demo](https://img.shields.io/badge/demo-online-green)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-green)](https://smartbasket-web.netlify.app)
 ---
 
 ## 🎯 Problem
