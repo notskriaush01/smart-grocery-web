@@ -1,4 +1,4 @@
-## ⚠️ Note: Some features may not work as expected due to a temporary issue with my main GitHub account, which affects the hosted backend and database. Currently being resolved.
+### ⚠️ Note: Some features may not work as expected due to a temporary issue with my main GitHub account, which affects the hosted backend and database. Currently being resolved.
 
 # 🚀 Smart Basket
 Save money on groceries and instantly generate recipes from your basket using AI.
